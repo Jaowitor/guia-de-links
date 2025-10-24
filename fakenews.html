@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Links - Fake News e Redes</title>
+  <style>
+    :root {
+      --bg-color: #f0f2f5;
+      --text-color: #333;
+      --link-bg: #eaf2ff;
+      --link-hover: #d0e4ff;
+      --title-color: #2c3e50;
+      --section-color: #2980b9;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --link-bg: #333;
+      --link-hover: #444;
+      --title-color: #ffffff;
+      --section-color: #00bfff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--section-color);
+      z-index: 1000;
+      display: flex;
+      gap: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .theme-toggle span {
+      transition: opacity 0.3s ease;
+    }
+
+    body:not(.dark) .moon {
+      opacity: 0.3;
+    }
+
+    body.dark .sun {
+      opacity: 0.3;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.2);
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: var(--title-color);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--section-color);
+      margin: 30px 0 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    a {
+      font-size: 1.3rem;
+      text-decoration: none;
+      color: var(--title-color);
+      background-color: var(--link-bg);
+      padding: 12px 20px;
+      border-radius: 8px;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: var(--link-hover);
+      color: #e74c3c;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      a {
+        font-size: 1.1rem;
+        padding: 10px 16px;
+      }
+
+      .theme-toggle {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <span class="sun">☀️</span>
+    <span class="moon">🌙</span>
+  </button>
+
+  <h1>Guia de Links</h1>
+
+  <h2>🔧 Ferramentas</h2>
+  <ul>
+    <li><a href="https://help.instagram.com/517073653436611?helpref=faq_content&utm_source=chatgpt.com" target="_blank">Ajuda do Instagram</a></li>
+    <li><a href="https://www.upgrow.com/instagram-web-viewer?utm_source=chatgpt.com" target="_blank">Instagram Web Viewer – Upgrow</a></li>
+  </ul>
+
+  <h2>📚 Informações</h2>
+  <ul>
+    <li><a href="https://www.gov.br/saude/pt-br/assuntos/saude-com-ciencia/noticias/2025/fevereiro/fake-news-sobre-vacinas-entenda-os-perigos-da-desinformacao?utm_source=chatgpt.com" target="_blank">Fake News sobre Vacinas – gov.br</a></li>
+    <li><a href="https://www.reuters.com/fact-check/portugues/ZKXZRHJC2FJLVCRUOZ5NMJP7II-2024-03-08/?utm_source=chatgpt.com" target="_blank">Verificação de Fatos – Reuters</a></li>
+    <li><a href="https://time.com/5060837/instagram-follow-hashtag/?utm_source=chatgpt.com" target="_blank">Como seguir hashtags – Time</a></li>
+  </ul>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
